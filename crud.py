@@ -1,5 +1,6 @@
 from sqlalchemy.orm import Session
-from db import models, schemas
+import models
+import schemas
 
 
 def get_books(db: Session, skip: int = 0, limit: int = 100):
