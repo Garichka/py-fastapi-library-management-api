@@ -1,6 +1,5 @@
 from datetime import date
 from typing import Optional
-
 from pydantic import BaseModel
 
 
@@ -20,7 +19,8 @@ class Book(BookBase):
 
 class AuthorBase(BaseModel):
     name: str
-    bio: str
+    bio: Optional[str] = None
+    books: list = []
 
 
 class Author(AuthorBase):

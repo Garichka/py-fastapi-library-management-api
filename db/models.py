@@ -1,6 +1,5 @@
 from sqlalchemy import Integer, Column, String, Date, ForeignKey
 from sqlalchemy.orm import relationship
-
 from db.database import Base
 
 
@@ -15,6 +14,7 @@ class Author(Base):
 
 class Book(Base):
     __tablename__ = "books"
+
     id = Column(Integer, primary_key=True)
     title = Column(String(255), nullable=False)
     summary = Column(String(255))
